@@ -1,8 +1,8 @@
 const moves = ['north', 'north', 'west', 'west', 'north', 'east','north'];
 
 const finalPosition = function (moves) {
-  x = 0;
-  y = 0;
+  let x = 0;
+  let y = 0;
   for (let i in moves) {
     if (moves[i] === 'north') {
       y += 1;
