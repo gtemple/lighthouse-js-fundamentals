@@ -23,5 +23,4 @@ function carPassing(cars, speed) {
 }
 
 
-
 console.log(carPassing(cars, 38))
