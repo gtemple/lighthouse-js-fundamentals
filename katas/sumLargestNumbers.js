@@ -7,7 +7,7 @@ const sumLargestNumbers = function(data) {
       if (datum > largest) {
         largest = datum
       } else {
-        secondLargest = datum;
+        secondLargest = datum; //creates smaller number for the second largest
       }
     })
 
