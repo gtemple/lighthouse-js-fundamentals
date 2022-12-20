@@ -1,12 +1,17 @@
 const squareCode = function(message) {
   let phrase = message.split(' ').join('');
   let squared = Math.ceil(Math.sqrt(phrase.length));
-
-  for (let i = 0; i < phrase.length; i += squared) {
-    
+  let code = [];
+  
+  
+  for (let i = 0; i < squared; i++) {
+    let row = [];
+    for (let j = i; j < phrase.length; j += squared) {
+      row.push(phrase[j]);
+    }
+    code.push(row.join(''));
   }
-
-  return squared;
+  return code.join(' ');
 };
 
 console.log(squareCode("chill out"));
