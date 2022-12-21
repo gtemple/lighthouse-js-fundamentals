@@ -1,5 +1,5 @@
 const blocksAway = function(directions) {
-  // NOTE** The directions will switch between the x and y axis every time
+  // NOTE** This function would also work in a grid spanning infinitely in every direction by returning negative numbers if the taxi were south or west of [0, 0]. Simply remove the Math.abs statements before the return statement.
   let facing = 0
   let coords = {
     'east': 0,
@@ -7,7 +7,6 @@ const blocksAway = function(directions) {
   }
 
   for (let i = 0; i < directions.length; i += 2) {
-    console.log(coords)
     if (facing === 0) {
       if (directions[i] === 'right') {
         facing = 1;
@@ -42,6 +41,8 @@ const blocksAway = function(directions) {
       }
     }
   }
+  coords.east = Math.abs(coords.east);
+  coords.north = Math.abs(coords.north);
   return coords;
 };
 
