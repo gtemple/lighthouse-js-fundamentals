@@ -40,4 +40,4 @@ let guess = function() {
   }
 }
 
-guess()
+guess();
